@@ -1,0 +1,27 @@
+{% extends "main/components/base.html" %} 
+
+{% block title %}
+    create Task
+
+{% endblock %}
+
+
+{% block content %}
+<div class=" container  m-auto">
+
+    <h3> Create new Todo</h3>
+    
+    <form method="POST"  >
+    {% csrf_token %}  
+   
+    {{ form }}
+
+    <div class="d-flex justify-content-around mt-3 align-items-center">
+        <input type="submit" class="btn btn-primary" value="Update  Task">
+        <a href="{% url 'home' %}" class="btn btn-dark"> Back</a>
+    </div>
+    </form>
+    
+</div>
+
+{% endblock  %}

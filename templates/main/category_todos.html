@@ -1,0 +1,12 @@
+{% extends "main/components/base.html" %} 
+{% block content %}
+<h1>Tasks for {{ category.name }}</h1>
+
+<ul>
+    {% for todo in todos %}
+        <li>{{ todo.title }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'home' %}" class="btn btn-primary">Back to All Categories</a>
+{%endblock%}
